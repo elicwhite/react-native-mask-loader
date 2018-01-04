@@ -1,6 +1,6 @@
 {
   "name": "react-native-mask-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native App Loader that shows an expanding image as a mask on your app. Direct rip of Twitter's loading animation.",
   "main": "lib/index.js",
   "author": "Eli White <github@eli-white.com>",
