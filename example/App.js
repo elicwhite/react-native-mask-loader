@@ -26,10 +26,10 @@ export default class App extends React.Component<{}, State> {
   }
 
   resetAnimation() {
-      this.setState({
-        appReady: false,
-        rootKey: Math.random()
-      });
+    this.setState({
+      appReady: false,
+      rootKey: Math.random()
+    });
 
     setTimeout(() => {
       this.setState({
