@@ -2,6 +2,8 @@
 
 This component provides a loading screen for React Native apps that is meant to reproduce Twitter's app loading animation.
 
+There is an accompanying blog post at https://facebook.github.io/react-native/blog/2018/01/18/implementing-twitters-app-loading-animation-in-react-native.html.
+
 ![Loader](assets/loader.gif)
 
 ## Installation
