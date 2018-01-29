@@ -77,10 +77,10 @@ export default class Loader extends React.Component<Props, State> {
     };
 
     const fullScreenBackgroundLayer = this.state.animationDone ? null : (
-      <View style={[styles.absoluteFullScreen, this.props.backgroundStyle]} />
+      <View style={[StyleSheet.absoluteFill, this.props.backgroundStyle]} />
     );
     const fullScreenWhiteLayer = this.state.animationDone ? null : (
-      <View style={[styles.absoluteFullScreen, styles.fullScreenWhiteLayer]} />
+      <View style={[StyleSheet.absoluteFill, styles.fullScreenWhiteLayer]} />
     );
 
     return (
@@ -111,13 +111,6 @@ export default class Loader extends React.Component<Props, State> {
 const styles = StyleSheet.create({
   fullScreen: {
     flex: 1,
-  },
-  absoluteFullScreen: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
   },
   centeredFullScreen: {
     flex: 1,
