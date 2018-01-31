@@ -6,7 +6,8 @@
   "author": "Eli White <github@eli-white.com>",
   "license": "BSD-2-Clause",
   "files": [
-    "lib"
+    "lib",
+    "README.md"
   ],
   "peerDependencies": {
     "react": "*",
