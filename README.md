@@ -20,6 +20,7 @@ yarn add react-native-mask-loader
 import Loader from 'react-native-mask-loader';
 
 <Loader
+  startDelay={1000}
   isLoaded={this.state.appHasLoaded}
   imageSource={require('./assets/twitter.png')}
   backgroundStyle={styles.loadingBackgroundStyle}
