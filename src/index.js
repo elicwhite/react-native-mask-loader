@@ -14,6 +14,7 @@ type Props = {|
   +isLoaded: boolean,
   +imageSource: any,
   +backgroundStyle: any,
+  +startDelay: number,
 |};
 
 type State = {|
@@ -24,6 +25,7 @@ type State = {|
 export default class Loader extends React.Component<Props, State> {
   static defaultProps = {
     isLoaded: false,
+    startDelay: 1000,
   };
 
   state = {
@@ -33,11 +35,14 @@ export default class Loader extends React.Component<Props, State> {
 
   componentWillReceiveProps(nextProps: Props) {
     if (nextProps.isLoaded && !this.props.isLoaded) {
-      Animated.timing(this.state.loadingProgress, {
-        toValue: 100,
-        duration: 1000,
-        useNativeDriver: true,
-      }).start(() => {
+      Animated.sequence([
+        Animated.delay(this.props.startDelay),
+        Animated.timing(this.state.loadingProgress, {
+          toValue: 100,
+          duration: 1000,
+          useNativeDriver: true,
+        }),
+      ]).start(() => {
         this.setState({
           animationDone: true,
         });
