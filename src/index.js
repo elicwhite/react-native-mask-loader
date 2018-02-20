@@ -94,6 +94,7 @@ export default class Loader extends React.Component<Props, State> {
               <Animated.Image
                 style={[styles.maskImageStyle, imageScale]}
                 source={this.props.imageSource}
+                resizeMode="contain"
               />
             </View>
           }
